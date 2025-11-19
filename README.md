@@ -121,19 +121,3 @@ After pushing a commit, Jenkins automatically triggers the pipeline — these im
 - **Kubernetes** — Runs the application pods, services and exposes the app.
 
 ---
-
-## ✅ Tips for a clean repo
-
-- Keep images in `images/before` and `images/after` exactly as listed above.  
-- If filenames contain spaces, GitHub requires them to be either URL-encoded (as in this file) or renamed without spaces (recommended).  
-- Prefer small, optimized screenshots (keep repo size reasonable).
-
----
-
-## ✨ Want more?
-I can:
-- Remove spaces from filenames and update links automatically.  
-- Produce a small pipeline diagram image and add it to the README.  
-- Create a `Jenkinsfile` snippet and `argocd` manifest examples for this flow.
-
-Tell me which of the above you'd like next.
