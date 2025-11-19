@@ -50,7 +50,7 @@ These images show the pipeline before a new commit is pushed.
 ---
 
 ### 7) Application — Running Version (Before)
-![Before – Application Running](images/before/Screenshot%202025-11-19%20123714.png)
+![Before – Application Running](images/before/Screenshot%2025-11-19%170157.png)
 
 *Figure: The application instance running the previous version.*
 
