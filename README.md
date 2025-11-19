@@ -105,7 +105,7 @@ After pushing a commit, Jenkins automatically triggers the pipeline — these im
 ---
 
 ### 7) Application — Updated Version Live
-![After – Application Live](images/after/Screenshot%202025-11-19%20124144.png)
+![After – Application Live](images/after/Screenshot 202025-11-19 20124144.png)
 
 *Figure: Application is updated and serving the new version.*
 
