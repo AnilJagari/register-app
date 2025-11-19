@@ -72,7 +72,15 @@ pipeline {
                 }
             }
         }
-
+		stage('Cleanup Disk') {
+    steps {
+        sh '''
+            echo "Cleaning old Docker data..."
+            docker system prune -af --volumes || true
+            echo "Disk Cleanup Completed!"
+        '''
+              }
+         }
         stage("Trivy Scan") {
             steps {
                 script {
