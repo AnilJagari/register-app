@@ -15,11 +15,12 @@ This project demonstrates a complete DevOps CI/CD workflow including:
 These images show the pipeline *before* a new commit is pushed.
 
 ![Before 1](images/before/Screenshot%202025-11-19%20123129.png)
+![Before 6](images/before/Screenshot%202025-11-19%20123345.png)
 ![Before 2](images/before/Screenshot%202025-11-19%20123153.png)
-![Before 3](images/before/Screenshot%202025-11-19%20123214.png)
 ![Before 4](images/before/Screenshot%202025-11-19%20123235.png)
 ![Before 5](images/before/Screenshot%202025-11-19%20123316.png)
-![Before 6](images/before/Screenshot%202025-11-19%20123345.png)
+![Before 3](images/before/Screenshot%202025-11-19%20123214.png)
+
 
 ---
 
