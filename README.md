@@ -152,7 +152,7 @@ Below is the complete workflow executed in this project:
 This represents a **complete and production-like DevOps pipeline** with CI, CD, GitOps, and Monitoring.
 ---
 
-## 📸 BEFORE COMMIT — Pipeline State Before Code Change
+## 📸 BEFORE NEW COMMIT — Pipeline State Before Code Change
 
 These images show the pipeline before a new commit is pushed.
 
