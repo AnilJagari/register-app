@@ -201,6 +201,14 @@ These images show the pipeline before a new commit is pushed.
 *Figure: The application instance running the previous version.*
 
 ---
+To verify that the CI/CD pipeline is working correctly, we updated the application UI by modifying the following file:
+
+`webapp/src/main/webapp/index.jsp`
+
+Inside this JSP file, a new message was added to check whether the entire pipeline detects the code change and deploys the updated version automatically.
+
+Let’s see if the update works on the real application after the commit.
+---
 
 ## 📸 AFTER COMMIT — Pipeline Execution After Code Change
 
