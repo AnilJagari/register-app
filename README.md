@@ -269,14 +269,3 @@ After pushing a commit, Jenkins automatically triggers the pipeline — these im
 *Figure: Application is updated and serving the new version.*
 
 ---
-
-## 📘 Stage Descriptions (Short)
-
-- **Continuous Integration (CI)** — Jenkins builds, runs unit tests and prepares artifacts.  
-- **Continuous Deployment (CD)** — Jenkins builds Docker images, tags them, and pushes to DockerHub.  
-- **SonarQube** — Static analysis for bugs, vulnerabilities and code smells; gate for quality.  
-- **DockerHub** — Acts as the image registry for deployment artifacts.  
-- **ArgoCD** — Watches Git (manifests) and image tags; performs syncs to Kubernetes.  
-- **Kubernetes** — Runs the application pods, services and exposes the app.
-
----
