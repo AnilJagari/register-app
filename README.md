@@ -123,26 +123,31 @@ Prometheus and Grafana are used to monitor the Kubernetes cluster, application p
 Below is the complete workflow executed in this project:
 
 1. **Developer pushes code → GitHub**
-2. **Jenkins CI Pipeline** automatically triggers  
-   - Pulls code  
+
+2. **Jenkins CI Pipeline**
+   - Pulls latest code  
    - Builds Java application  
    - Runs tests  
    - Performs SonarQube code analysis  
-3. **Jenkins CD Pipeline**  
-   - Builds Docker image  
-   - Tags & pushes image to DockerHub  
-   - Updates Kubernetes manifest (image tag)  
-   - Commits YAML to Git (GitOps)
-4. **Argo CD detects the new commit**  
-   - Syncs YAML  
+   - Builds & pushes Docker image  
+   - Triggers CD pipeline automatically  
+
+3. **Jenkins CD Pipeline**
+   - Updates Kubernetes manifest with new image tag  
+   - Commits updated YAML to GitHub (GitOps)  
+
+4. **Argo CD detects the new commit**
+   - Syncs updated YAML  
    - Pulls the new image from DockerHub  
-   - Performs rolling update on EKS
-5. **Kubernetes (EKS)**  
+   - Performs rolling update on EKS  
+
+5. **Kubernetes (EKS)**
    - Deploys new pods  
-   - Updates services & load balancer
-6. **Prometheus + Grafana**  
-   - Monitor cluster metrics  
-   - Real-time dashboards for pod CPU, memory, requests, errors
+   - Updates services & load balancer  
+
+6. **Prometheus + Grafana**
+   - Monitor cluster & application metrics  
+   - Real-time dashboards for CPU, memory, requests, errors  
 
 This represents a **complete and production-like DevOps pipeline** with CI, CD, GitOps, and Monitoring.
 ---
@@ -167,7 +172,7 @@ These images show the pipeline before a new commit is pushed.
 
 ---
 
-### 3) Jenkins — CD Stage (Docker Build Trigger)
+### 3) Jenkins — CD Job Triggers Automatically
 ![Before – CD Stage](images/before/Screenshot%202025-11-19%20123316.png)
 
 *Figure: CD stage which packages artifact and triggers container build.*
@@ -230,7 +235,7 @@ After pushing a commit, Jenkins automatically triggers the pipeline — these im
 
 ---
 
-### 3) Jenkins — CD Stage Executing (Docker Build & Push)
+### 3) Jenkins — CD Job Triggers Automatically
 ![After – CD Stage](images/after/Screenshot%202025-11-19%20123906.png)
 
 *Figure: CD step building image and preparing to push.*
