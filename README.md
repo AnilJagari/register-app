@@ -117,7 +117,34 @@ Prometheus and Grafana are used to monitor the Kubernetes cluster, application p
 > This will contain all commands for installing and configuring Prometheus & Grafana on Kubernetes.
 
 
+---
+# 🧩 End-to-End Architecture — Complete DevOps Workflow
 
+Below is the complete workflow executed in this project:
+
+1. **Developer pushes code → GitHub**
+2. **Jenkins CI Pipeline** automatically triggers  
+   - Pulls code  
+   - Builds Java application  
+   - Runs tests  
+   - Performs SonarQube code analysis  
+3. **Jenkins CD Pipeline**  
+   - Builds Docker image  
+   - Tags & pushes image to DockerHub  
+   - Updates Kubernetes manifest (image tag)  
+   - Commits YAML to Git (GitOps)
+4. **Argo CD detects the new commit**  
+   - Syncs YAML  
+   - Pulls the new image from DockerHub  
+   - Performs rolling update on EKS
+5. **Kubernetes (EKS)**  
+   - Deploys new pods  
+   - Updates services & load balancer
+6. **Prometheus + Grafana**  
+   - Monitor cluster metrics  
+   - Real-time dashboards for pod CPU, memory, requests, errors
+
+This represents a **complete and production-like DevOps pipeline** with CI, CD, GitOps, and Monitoring.
 ---
 
 ## 📸 BEFORE COMMIT — Pipeline State Before Code Change
